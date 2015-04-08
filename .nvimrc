@@ -2,8 +2,11 @@
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+syntax on
 
 set noswapfile
+
+let g:python_host_prog='/usr/bin/python'
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle.vim
@@ -28,7 +31,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 "Plugin 'carlosgaldino/elixir-snippets'
 "Plugin 'klen/python-mode'
 "Plugin 'KabbAmine/vCoolor'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 
 
 "
@@ -41,7 +44,7 @@ Plugin 'scrooloose/nerdtree'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
+ Plugin 'L9'
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
@@ -71,7 +74,7 @@ filetype plugin indent on    " required
 
 autocmd FileType python set wrap
 "let g:pymode_options_max_line_length = 1
-let g:pymode_lint = 0
+"let g:pymode_lint = 0
 let g:django_projects = '~/Documents/Projects/Django_projects/' "Sets all projects under project
 
 set tabstop=4
@@ -85,13 +88,13 @@ autocmd FileType python set sts=4
 map <F6> :tabp<CR>
 map <F8> :tabn<CR>
 
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 nnoremap <C-y> "+y
 vnoremap <C-y> "+y
 nnoremap <C-p> "+gP
 vnoremap <C-p> "+gP
-map <C-l> :NERDTreeToggle<CR>
+"map <C-l> :NERDTreeToggle<CR>
 
 "from Vincent Driessen 
 
